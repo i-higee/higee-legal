@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>技术支持 - 家庭储能</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #ffffff;
+      color: #333333;
+      min-height: 100vh;
+      padding: 48px 24px 64px;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .app-icon {
+      margin: 0 auto 18px;
+      width: 64px;
+      height: 64px;
+    }
+    .app-icon img {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+    }
+    .app-name {
+      font-family: "Noto Serif SC", "PingFang SC", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .app-subtitle {
+      font-size: 13px;
+      color: #888888;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+    .section {
+      margin-bottom: 36px;
+    }
+    .section-title {
+      font-family: "Noto Serif SC", "PingFang SC", serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 16px;
+    }
+    .info-list {
+      border-top: 1px solid #eeeeee;
+    }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .info-label {
+      width: 70px;
+      font-size: 13px;
+      color: #888888;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .info-value {
+      flex: 1;
+      font-size: 14px;
+      color: #444444;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+    .info-value a {
+      color: #111111;
+      text-decoration: none;
+      border-bottom: 1px solid #dddddd;
+    }
+    .info-value a:active {
+      opacity: 0.5;
+    }
+    .faq-list {
+      border-top: 1px solid #eeeeee;
+    }
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .faq-a {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #666666;
+    }
+    .doc-links {
+      border-top: 1px solid #eeeeee;
+    }
+    .link-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      text-decoration: none;
+      border-bottom: 1px solid #eeeeee;
+      transition: opacity 0.15s;
+    }
+    .link-item:last-child {
+      border-bottom: none;
+    }
+    .link-item:active {
+      opacity: 0.5;
+    }
+    .link-text {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 500;
+      color: #111111;
+    }
+    .link-arrow {
+      color: #cccccc;
+      font-size: 15px;
+      margin-left: 8px;
+      font-family: "Noto Serif SC", serif;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaaaaa;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="app-icon"><img src="logo.png" alt="家庭储能"></div>
+      <h1 class="app-name">家庭储能</h1>
+      <p class="app-subtitle">HIGEE BMS 蓝牙监控系统</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">联系方式</div>
+      <div class="info-list">
+        <div class="info-row">
+          <div class="info-label">邮箱</div>
+          <div class="info-value"><a href="mailto:huac@ihigee.com">huac@ihigee.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">官网</div>
+          <div class="info-value"><a href="https://www.ihigee.com" target="_blank" rel="noopener noreferrer">www.higeeos.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">开发商</div>
+          <div class="info-value">江苏海基新能源股份有限公司</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">常见问题</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">如何连接蓝牙设备？</div>
+          <div class="faq-a">确保设备蓝牙已开启，打开 APP 后会自动扫描周围蓝牙设备，点击对应设备即可连接。如无法搜索到设备，请确认设备处于可被发现状态。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">数据存储在什么地方？</div>
+          <div class="faq-a">所有数据仅存储在您的设备本地，APP 不会上传任何数据到云端，也不会收集您的个人隐私信息。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">APP 是否需要联网？</div>
+          <div class="faq-a">APP 以本地离线运行为核心，无需联网即可正常使用全部功能。仅当您手动检查版本更新时才会短暂联网。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">如何反馈问题或建议？</div>
+          <div class="faq-a">您可以通过邮件 huac@ihigee.com 联系我们，我们会及时回复您的反馈。</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="footer">江苏海基新能源股份有限公司 &copy; 2026</div>
+  </div>
+</body>
+</html>

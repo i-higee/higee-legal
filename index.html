@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HIGEE - 协议文档</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #ffffff;
+      color: #111111;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 24px 60px;
+    }
+    .container {
+      width: 100%;
+      max-width: 380px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .app-icon {
+      margin: 0 auto 18px;
+      width: 64px;
+      height: 64px;
+    }
+    .app-icon img {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+    }
+    .app-name {
+      font-family: "Noto Serif SC", "PingFang SC", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .app-subtitle {
+      font-size: 13px;
+      color: #888888;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+    }
+    .intro {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555555;
+      margin-bottom: 36px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid #eeeeee;
+    }
+    .link-item {
+      display: flex;
+      align-items: center;
+      padding: 18px 0;
+      text-decoration: none;
+      border-bottom: 1px solid #eeeeee;
+      transition: opacity 0.15s;
+    }
+    .link-item:active {
+      opacity: 0.5;
+    }
+    .link-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .link-title {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      color: #111111;
+      margin-bottom: 2px;
+    }
+    .link-desc {
+      display: block;
+      font-size: 13px;
+      color: #888888;
+    }
+    .link-arrow {
+      color: #cccccc;
+      font-size: 16px;
+      margin-left: 8px;
+      flex-shrink: 0;
+      font-family: "Noto Serif SC", serif;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaaaaa;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+
+      <h1 class="app-name">Higee</h1>
+      <p class="app-subtitle">BMS蓝牙监控应用</p>
+    </div>
+
+    <p class="intro">欢迎使用Higee APP，以下为本软件相关的协议文档，请仔细阅读。</p>
+
+    <div class="links">
+      <a href="agreement.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">用户协议</span>
+          <span class="link-desc">软件使用条款与用户权利义务</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="privacy.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">隐私协议</span>
+          <span class="link-desc">数据收集、使用与保护说明</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a href="support.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">技术支持</span>
+          <span class="link-desc">联系客服与常见问题解答</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
