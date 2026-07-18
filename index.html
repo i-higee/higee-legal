@@ -8,11 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       background: #ffffff;
@@ -21,26 +17,38 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 80px 24px 60px;
+      padding: 64px 24px 60px;
     }
-    .container {
-      width: 100%;
-      max-width: 380px;
+    .container { width: 100%; max-width: 380px; }
+
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 20px;
     }
-    .header {
-      text-align: center;
-      margin-bottom: 44px;
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      border: 1px solid #dddddd;
+      border-radius: 20px;
+      background: #ffffff;
+      color: #555555;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
     }
-    .app-icon {
-      margin: 0 auto 18px;
-      width: 64px;
-      height: 64px;
+    .lang-btn:active { opacity: 0.6; }
+    .lang-btn .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
     }
-    .app-icon img {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-    }
+
+    .header { text-align: center; margin-bottom: 36px; }
     .app-name {
       font-family: "Noto Serif SC", "PingFang SC", serif;
       font-size: 22px;
@@ -49,59 +57,68 @@
       letter-spacing: 0.02em;
       margin-bottom: 6px;
     }
-    .app-subtitle {
-      font-size: 13px;
-      color: #888888;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-    }
+    .app-subtitle { font-size: 13px; color: #888888; font-weight: 400; letter-spacing: 0.04em; }
+
     .intro {
       text-align: center;
       font-size: 14px;
       line-height: 1.7;
       color: #555555;
-      margin-bottom: 36px;
+      margin-bottom: 28px;
     }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #aaaaaa;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
     .links {
       display: flex;
       flex-direction: column;
-      gap: 0;
       border-top: 1px solid #eeeeee;
     }
     .link-item {
       display: flex;
       align-items: center;
-      padding: 18px 0;
+      padding: 16px 0;
       text-decoration: none;
       border-bottom: 1px solid #eeeeee;
       transition: opacity 0.15s;
     }
-    .link-item:active {
-      opacity: 0.5;
+    .link-item:active { opacity: 0.5; }
+    .link-info { flex: 1; min-width: 0; }
+    .link-title { display: block; font-size: 15px; font-weight: 500; color: #111111; margin-bottom: 1px; }
+    .link-desc { display: block; font-size: 12px; color: #999999; }
+    .link-arrow { color: #cccccc; font-size: 15px; margin-left: 8px; flex-shrink: 0; }
+
+    .version-section { margin-top: 28px; }
+    .version-list { border-top: 1px solid #eeeeee; }
+    .version-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #eeeeee;
     }
-    .link-info {
-      flex: 1;
-      min-width: 0;
-    }
-    .link-title {
-      display: block;
-      font-size: 16px;
+    .version-platform {
+      width: 68px;
+      font-size: 13px;
       font-weight: 500;
       color: #111111;
-      margin-bottom: 2px;
-    }
-    .link-desc {
-      display: block;
-      font-size: 13px;
-      color: #888888;
-    }
-    .link-arrow {
-      color: #cccccc;
-      font-size: 16px;
-      margin-left: 8px;
       flex-shrink: 0;
-      font-family: "Noto Serif SC", serif;
     }
+    .version-info { flex: 1; min-width: 0; }
+    .version-number { display: block; font-size: 14px; color: #444444; }
+    .version-store { display: block; font-size: 12px; color: #999999; margin-top: 1px; }
+    .version-store a {
+      color: #4a7cf7;
+      text-decoration: none;
+    }
+    .version-store a:active { opacity: 0.6; }
+
     .footer {
       text-align: center;
       font-size: 12px;
@@ -109,42 +126,141 @@
       margin-top: 40px;
       line-height: 1.6;
     }
+
+
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
-
-      <h1 class="app-name">Higee</h1>
-      <p class="app-subtitle">BMS蓝牙监控应用</p>
+    <div class="lang-toggle">
+      <button class="lang-btn" onclick="toggleLang()">
+        <span class="dot"></span>
+        <span id="langLabel">EN</span>
+      </button>
     </div>
 
-    <p class="intro">欢迎使用Higee APP，以下为本软件相关的协议文档，请仔细阅读。</p>
+    <div class="header">
+      <h1 class="app-name">Higee</h1>
+      <p class="app-subtitle" data-lang="zh">BMS蓝牙监控应用</p>
+      <p class="app-subtitle" data-lang="en">BMS Bluetooth Monitoring App</p>
+    </div>
 
+    <p class="intro" data-lang="zh">欢迎使用Higee APP，以下为本软件相关的协议文档，请仔细阅读。</p>
+    <p class="intro" data-lang="en">Welcome to Higee APP. Please read the following documents carefully.</p>
+
+    <!-- 文档链接 -->
+    <div class="section-title" data-lang="zh">文档</div>
+    <div class="section-title" data-lang="en">Documents</div>
     <div class="links">
-      <a href="agreement.html" class="link-item">
+      <a data-lang="zh" href="agreement.html" class="link-item">
         <div class="link-info">
           <span class="link-title">用户协议</span>
           <span class="link-desc">软件使用条款与用户权利义务</span>
         </div>
         <span class="link-arrow">→</span>
       </a>
-      <a href="privacy.html" class="link-item">
+      <a data-lang="en" href="agreement-en.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">User Agreement</span>
+          <span class="link-desc">Terms of use and your rights and obligations</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a data-lang="zh" href="privacy.html" class="link-item">
         <div class="link-info">
           <span class="link-title">隐私协议</span>
           <span class="link-desc">数据收集、使用与保护说明</span>
         </div>
         <span class="link-arrow">→</span>
       </a>
-      <a href="support.html" class="link-item">
+      <a data-lang="en" href="privacy-en.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">Privacy Policy</span>
+          <span class="link-desc">Data collection, use and protection</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a data-lang="zh" href="support.html" class="link-item">
         <div class="link-info">
           <span class="link-title">技术支持</span>
           <span class="link-desc">联系客服与常见问题解答</span>
         </div>
         <span class="link-arrow">→</span>
       </a>
+      <a data-lang="en" href="support-en.html" class="link-item">
+        <div class="link-info">
+          <span class="link-title">Support</span>
+          <span class="link-desc">Contact us and FAQ</span>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
     </div>
 
+    <!-- 版本信息 -->
+    <div class="version-section">
+      <div class="section-title" data-lang="zh">版本信息</div>
+      <div class="section-title" data-lang="en">Version Info</div>
+      <div class="version-list">
+        <div class="version-row">
+          <div class="version-platform">Android</div>
+          <div class="version-info">
+            <span class="version-number" data-lang="zh">最新版本 0.2.1</span>
+            <span class="version-number" data-lang="en">Latest v0.2.1</span>
+            <span class="version-store" data-lang="zh"><a href="https://www.pgyer.com/higee-android" target="_blank" rel="noopener noreferrer">蒲公英下载</a></span>
+            <span class="version-store" data-lang="en"><a href="https://www.pgyer.com/higee-android" target="_blank" rel="noopener noreferrer">Download from Pgyer</a></span>
+          </div>
+        </div>
+        <div class="version-row">
+          <div class="version-platform">iOS</div>
+          <div class="version-info">
+            <span class="version-number" data-lang="zh">即将上线</span>
+            <span class="version-number" data-lang="en">Coming soon</span>
+            <span class="version-store" data-lang="zh"><a href="https://apps.apple.com/app/id" target="_blank" rel="noopener noreferrer">App Store</a></span>
+            <span class="version-store" data-lang="en"><a href="https://apps.apple.com/app/id" target="_blank" rel="noopener noreferrer">App Store</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
+
+  <script>
+    var currentLang = 'zh';
+
+    function applyLang(lang) {
+      currentLang = lang;
+      var els = document.querySelectorAll('[data-lang]');
+      for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        if (el.getAttribute('data-lang') === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      }
+      document.getElementById('langLabel').textContent = lang === 'zh' ? 'EN' : '中';
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      try {
+        localStorage.setItem('higee_lang', lang);
+      } catch(e) {}
+    }
+
+    (function init() {
+      // 先隐藏所有 data-lang 元素
+      var els = document.querySelectorAll('[data-lang]');
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.display = 'none';
+      }
+      var saved = null;
+      try { saved = localStorage.getItem('higee_lang'); } catch(e) {}
+      var lang = (saved === 'en' || saved === 'zh') ? saved : 'zh';
+      applyLang(lang);
+    })();
+
+    function toggleLang() {
+      applyLang(currentLang === 'zh' ? 'en' : 'zh');
+    }
+  </script>
 </body>
 </html>

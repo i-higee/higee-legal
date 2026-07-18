@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Support - Higee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #ffffff;
+      color: #333333;
+      min-height: 100vh;
+      padding: 48px 24px 64px;
+    }
+    .container { width: 100%; max-width: 500px; margin: 0 auto; }
+    .header { text-align: center; margin-bottom: 44px; }
+    .app-icon { margin: 0 auto 18px; width: 64px; height: 64px; background: #f0f0f0; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; color: #333; }
+    .app-name {
+      font-family: "Noto Serif", Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.02em;
+      margin-bottom: 6px;
+    }
+    .app-subtitle { font-size: 13px; color: #888888; font-weight: 400; letter-spacing: 0.04em; }
+    .section { margin-bottom: 36px; }
+    .section-title {
+      font-family: "Noto Serif", Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 16px;
+    }
+    .info-list { border-top: 1px solid #eeeeee; }
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .info-label {
+      width: 70px;
+      font-size: 13px;
+      color: #888888;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .info-value {
+      flex: 1;
+      font-size: 14px;
+      color: #444444;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+    .info-value a {
+      color: #111111;
+      text-decoration: none;
+      border-bottom: 1px solid #dddddd;
+    }
+    .info-value a:active { opacity: 0.5; }
+    .faq-list { border-top: 1px solid #eeeeee; }
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .faq-a {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #666666;
+    }
+    .doc-links { border-top: 1px solid #eeeeee; }
+    .link-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 0;
+      text-decoration: none;
+      border-bottom: 1px solid #eeeeee;
+      transition: opacity 0.15s;
+    }
+    .link-item:last-child { border-bottom: none; }
+    .link-item:active { opacity: 0.5; }
+    .link-text {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 500;
+      color: #111111;
+    }
+    .link-arrow {
+      color: #cccccc;
+      font-size: 15px;
+      margin-left: 8px;
+      font-family: "Noto Serif", Georgia, serif;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #aaaaaa;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="app-icon">H</div>
+      <h1 class="app-name">Higee</h1>
+      <p class="app-subtitle">HIGEE BMS Bluetooth Monitoring System</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Contact Information</div>
+      <div class="info-list">
+        <div class="info-row">
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:huac@ihigee.com">huac@ihigee.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Website</div>
+          <div class="info-value"><a href="https://www.ihigee.com" target="_blank" rel="noopener noreferrer">www.higeeos.com</a></div>
+        </div>
+        <div class="info-row">
+          <div class="info-label">Developer</div>
+          <div class="info-value">Jiangsu Hiji New Energy Co., Ltd.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">How do I connect a Bluetooth device?</div>
+          <div class="faq-a">Make sure Bluetooth is enabled on your device. Open the APP and it will automatically scan for nearby Bluetooth devices. Tap the desired device to connect. If no devices are found, please ensure the device is in discoverable mode.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Where is my data stored?</div>
+          <div class="faq-a">All data is stored only locally on your device. The APP does not upload any data to the cloud, nor does it collect your personal private information.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does the APP require an internet connection?</div>
+          <div class="faq-a">The APP is designed primarily for local offline use. All features work normally without an internet connection. It only connects briefly to the internet when you manually check for version updates.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How do I provide feedback or suggestions?</div>
+          <div class="faq-a">You can contact us via email at huac@ihigee.com. We will respond to your feedback promptly.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Legal Documents</div>
+      <div class="doc-links">
+        <a href="privacy-en.html" class="link-item">
+          <span class="link-text">Privacy Policy</span>
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="agreement-en.html" class="link-item">
+          <span class="link-text">User Agreement</span>
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">Jiangsu Hiji New Energy Co., Ltd. &copy; 2026</div>
+  </div>
+</body>
+</html>
