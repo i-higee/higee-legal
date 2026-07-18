@@ -1,0 +1,10 @@
+{
+  "ios": {
+    "latest_version": "1.0.0",
+    "minimum_version": "1.0.0",
+    "app_store_id": "",
+    "app_store_url": "https://apps.apple.com/app/id",
+    "release_notes": "",
+    "update_type": "optional"
+  }
+}
