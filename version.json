@@ -12,14 +12,14 @@
     "update_type": "optional"
   },
   "android": {
-    "latest_version": "0.2.1",
-    "latest_build": 3,
-    "minimum_version": "0.2.1",
-    "minimum_build": 3,
+    "latest_version": "0.2.2",
+    "latest_build": 4,
+    "minimum_version": "0.2.2",
+    "minimum_build": 4,
     "store_url": "https://www.pgyer.com/higee-android",
     "release_notes": {
-      "zh": "1. 新增恩阶BMS协议支持\n2. 新增电池数据详情页与通用数据展示组件\n3. 完成全量国际化适配，支持中英文切换\n4. 新增用户协议与隐私政策页面\n5. 修复容量解析和电压显示单位问题",
-      "en": "1. Added Enjie BMS protocol support\n2. Added battery data detail page\n3. Full i18n support with Chinese/English switching\n4. Added user agreement and privacy policy pages\n5. Fixed capacity parsing and voltage display unit issues"
+      "zh": "1. 新增61H协议多语言支持，优化告警与状态展示",
+      "en": "1. Added 61H protocol multilingual support, optimized alarm and status display"
     },
     "update_type": "optional"
   }
